@@ -99,6 +99,10 @@ video {
     width: 15%;
   }
 
+  .menu {
+    display: none;
+  }
+
   .side-panel {
     position: absolute;
     display: flex;
@@ -131,12 +135,12 @@ video {
     max-width: 50%;
   }
 
-  .underline-2 {
-    max-width: 73%;
-  }
-
   .underline-3 {
     max-width: 83%;
+  }
+
+  .underline-4 {
+    max-width: 95%;
   }
 
   .underlining {
