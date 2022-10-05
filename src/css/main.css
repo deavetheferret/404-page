@@ -1,0 +1,435 @@
+/* ====================================
+// css variables
+// ==================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+
+:root {
+  --cube-size: 80vh;
+  --color-main: #000;
+  --color-second: #fff;
+  --font-main: roc-grotesk, sans-serif;
+  --font-secondary: roc-grotesk-wide, sans-serif;
+}
+
+/* ====================================
+// reset rules
+// ==================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+  vertical-align: middle;
+}
+
+/* ====================================
+// base rules
+// ==================================== */
+
+/* Desktop viewport */
+
+@media only screen and (min-width: 970px) {
+  body {
+    padding: 20px;
+    max-width: 1728px;
+  }
+
+  header,
+  main,
+  footer,
+  .side-panel {
+    padding: 5px 10px;
+    border: solid 2px var(--color-main);
+    margin-bottom: 10px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main {
+    height: 70vh;
+  }
+
+  footer {
+    height: 20vh;
+  }
+
+  header h1 {
+    font-size: 0px;
+  }
+
+  header h1 img {
+    width: 56%;
+  }
+
+  header i {
+    font-size: 31px;
+  }
+
+  .inside-header {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+  }
+
+  .side-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+    margin-top: 57px;
+  }
+
+  .side-panel ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+  }
+
+  .side-panel a {
+    text-decoration: none;
+  }
+
+  .underline {
+    height: 2px;
+    width: 0%;
+    background-color: var(--color-main);
+    transition: width 0.3s;
+  }
+
+  .underline-1 {
+    max-width: 50%;
+  }
+
+  .underline-2 {
+    max-width: 73%;
+  }
+
+  .underline-3 {
+    max-width: 83%;
+  }
+
+  .underlining {
+    width: 100%;
+  }
+
+  .scene {
+    position: absolute;
+    height: 69.6%;
+    width: 91%;
+    top: 77.11px;
+    right: 133px;
+    left: 133px;
+    bottom: 0;
+    perspective: calc(var(--cube-size) + 400px);
+  }
+
+  .cube {
+    animation: cube-appear 1s ease-in-out infinite;
+    position: absolute;
+    width: var(--cube-size);
+    height: calc(var(--cube-size) - 20vh);
+    left: 40vw;
+    top: 45vh;
+    margin-top: calc(-1 / 2 * var(--cube-size));
+    margin-left: calc(-1 / 2 * var(--cube-size));
+    transform-style: preserve-3d;
+    transform: translateZ(calc(-1 / 2 * var(--cube-size)));
+    transition: transform 0.2s;
+    text-align: center;
+  }
+
+  .cube__face {
+    position: absolute;
+    line-height: calc(var(--cube-size) - 10vh);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 400px;
+    font-family: var(--font-main);
+    font-weight: 200;
+    backface-visibility: hidden;
+    color: var(--color-main);
+  }
+
+  .cube__face--front {
+    transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
+  }
+
+  .card {
+    color: var(--color-main);
+    position: absolute;
+    bottom: 6%;
+    left: 40vw;
+    font-family: sans-serif;
+    animation: card-appear 0.5s ease-in-out 1;
+    background-color: var(--color-second);
+  }
+
+  .card h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .card a {
+    color: var(--color-second);
+    background: var(--color-main);
+    padding: 7px 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    box-shadow: 0 0 var(--color-main);
+    border: solid var(--color-main) 2px;
+    font-weight: 500;
+  }
+
+  .card a:hover,
+  .card a:active,
+  .acrd a:focus {
+    border: solid var(--color-main) 2px;
+    box-sizing: border-box;
+    background-color: var(--color-second);
+    box-shadow: 5px 5px var(--color-main);
+    color: var(--color-main);
+  }
+
+  @keyframes card-appear {
+    from {
+      transform: translatex(-5%);
+      opacity: 0%;
+    }
+    to {
+      transform: translatex(0%);
+      opacity: 100%;
+    }
+  }
+
+  @keyframes cube-appear {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+}
+
+/* Mobile viewport */
+
+@media only screen and (max-width: 970px) {
+  body {
+    padding: 20px;
+    width: 320px;
+    margin: auto;
+    position: relative;
+  }
+
+  header,
+  main,
+  footer,
+  .side-panel {
+    padding: 5px 10px;
+    border: solid 2px var(--color-main);
+    margin-bottom: 10px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main {
+    height: 50vh;
+  }
+
+  footer {
+    height: 20vh;
+  }
+
+  header h1 {
+    font-size: 0px;
+  }
+
+  header h1 img {
+    width: 56%;
+  }
+
+  header i {
+    font-size: 20px;
+  }
+
+  .inside-header {
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+  }
+
+  .closed-version {
+    display: none;
+  }
+
+  .side-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 47px;
+    font-size: 14px;
+    width: 87.5%;
+    margin-bottom: 0;
+  }
+
+  .side-panel nav {
+    width: 100%;
+  }
+
+  .side-panel ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .side-panel li {
+    margin-top: 2px;
+  }
+
+  .side-panel a {
+    text-decoration: none;
+  }
+
+  .side-panel a:hover,
+  .side-panel a:active,
+  .side-panel a:focus {
+    text-decoration: underline;
+  }
+
+  .close-side-panel {
+    display: none;
+  }
+
+  .underline {
+    display: none;
+  }
+
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .cube {
+    animation: cube-appear 1s ease-in-out infinite;
+    position: absolute;
+    transition: transform 0.2s;
+    text-align: center;
+    width: 100%;
+    top: -100px;
+    left: -3px;
+    height: var(--cube-size);
+  }
+
+  .cube__face {
+    position: static;
+    line-height: calc(var(--cube-size) - 10vh);
+    text-align: center;
+    font-size: 125px;
+    font-family: var(--font-main);
+    font-weight: 200;
+    backface-visibility: hidden;
+    color: var(--color-main);
+  }
+
+  .card {
+    color: var(--color-main);
+    position: static;
+    bottom: 6%;
+    left: 40vw;
+    font-family: sans-serif;
+    animation: card-appear 0.5s ease-in-out 1;
+  }
+
+  .card h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .card a {
+    color: var(--color-second);
+    background: var(--color-main);
+    padding: 7px 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    box-shadow: 0 0 var(--color-main);
+    border: solid var(--color-main) 2px;
+    font-weight: 500;
+  }
+
+  .card a:hover,
+  .card a:active,
+  .acrd a:focus {
+    border: solid var(--color-main) 2px;
+    box-sizing: border-box;
+    background-color: var(--color-second);
+    box-shadow: 5px 5px var(--color-main);
+    color: var(--color-main);
+  }
+
+  @keyframes card-appear {
+    from {
+      transform: translatex(-5%);
+      opacity: 0%;
+    }
+    to {
+      transform: translatex(0%);
+      opacity: 100%;
+    }
+  }
+
+  @keyframes cube-appear {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+}
