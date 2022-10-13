@@ -1,6 +1,8 @@
 # FD-404-page
 An exercice turn into a masterclass (it's a joke I'm not a master lmao).
 
+![website preview](https://raw.githubusercontent.com/deavetheferret/404-page/main/src/img/preview-page.png)
+
 and here you got the link to see it in action : <a href="https://francois-devantay.at-eikon.ch/">404 HOME PAGE</a>
 
 For this project i learn a lot of technologies to make this real and i want to show you some of these : 
