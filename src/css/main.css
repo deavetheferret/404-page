@@ -63,7 +63,7 @@ video {
   footer,
   .side-panel {
     padding: 5px 10px;
-    border: solid 2px var(--color-main);
+    border: solid 1px var(--color-main);
     margin-bottom: 10px;
   }
 
@@ -89,6 +89,12 @@ video {
     width: 56%;
   }
 
+  header a {
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 15px;
+  }
+
   header i {
     font-size: 31px;
   }
@@ -109,7 +115,7 @@ video {
     flex-direction: column;
     justify-content: space-around;
     height: 70vh;
-    margin-top: 57px;
+    margin-top: 54px;
   }
 
   .side-panel ul {
@@ -140,6 +146,18 @@ video {
   }
 
   .underline-4 {
+    max-width: 95%;
+  }
+
+  .underline-5 {
+    max-width: 50%;
+  }
+
+  .underline-6 {
+    max-width: 83%;
+  }
+
+  .underline-7 {
     max-width: 95%;
   }
 

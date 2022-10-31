@@ -90,11 +90,17 @@ var buttonFst = document.querySelector(".button-1");
 var buttonScd = document.querySelector(".button-2");
 var buttonThd = document.querySelector(".button-3");
 var buttonFrt = document.querySelector(".button-4");
+var buttonFth = document.querySelector(".button-5");
+var buttonSxt = document.querySelector(".button-6");
+var buttonSev = document.querySelector(".button-7");
 
 var underlineFst = document.querySelector(".underline-1");
 var underlineScd = document.querySelector(".underline-2");
 var underlineThd = document.querySelector(".underline-3");
 var underlineFrt = document.querySelector(".underline-4");
+var underlineFth = document.querySelector(".underline-5");
+var underlineSxt = document.querySelector(".underline-6");
+var underlineSev = document.querySelector(".underline-7");
 
 var underliningFst = function () {
   underlineFst.classList.add("underlining");
@@ -124,6 +130,27 @@ var stopUnderliningFrt = function () {
   underlineFrt.classList.remove("underlining");
 };
 
+var underliningFth = function () {
+  underlineFth.classList.add("underlining");
+};
+var stopUnderliningFth = function () {
+  underlineFth.classList.remove("underlining");
+};
+
+var underliningSxt = function () {
+  underlineSxt.classList.add("underlining");
+};
+var stopUnderliningSxt = function () {
+  underlineSxt.classList.remove("underlining");
+};
+
+var underliningSev = function () {
+  underlineSev.classList.add("underlining");
+};
+var stopUnderliningSev = function () {
+  underlineSev.classList.remove("underlining");
+};
+
 buttonFst.addEventListener("mousemove", underliningFst);
 buttonFst.addEventListener("mouseleave", stopUnderliningFst);
 buttonScd.addEventListener("mousemove", underliningScd);
@@ -132,6 +159,12 @@ buttonThd.addEventListener("mousemove", underliningThd);
 buttonThd.addEventListener("mouseleave", stopUnderliningThd);
 buttonFrt.addEventListener("mousemove", underliningFrt);
 buttonFrt.addEventListener("mouseleave", stopUnderliningFrt);
+buttonFth.addEventListener("mousemove", underliningFth);
+buttonFth.addEventListener("mouseleave", stopUnderliningFth);
+buttonSxt.addEventListener("mousemove", underliningSxt);
+buttonSxt.addEventListener("mouseleave", stopUnderliningSxt);
+buttonSev.addEventListener("mousemove", underliningSev);
+buttonSev.addEventListener("mouseleave", stopUnderliningSev);
 
 var menu = document.querySelector(".menu");
 var sidePanel = document.querySelector(".side-panel");
