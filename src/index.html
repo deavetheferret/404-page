@@ -13,6 +13,9 @@
     ></script>
   </head>
   <body>
+    <div class="background--custom">
+      <canvas id="canvas" />
+    </div>
     <div class="side-panel close-side-panel">
       <nav>
         <ul>
@@ -85,6 +88,11 @@
         <a href="https://youtu.be/dQw4w9WgXcQ" class="button">Go back</a>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+    <script>
+      var gradient = new Gradient();
+      gradient.initGradient("#canvas");
+    </script>
     <script src="js/main.js" type="module"></script>
   </body>
 </html>

@@ -53,6 +53,30 @@ video {
 /* Desktop viewport */
 
 @media only screen and (min-width: 970px) {
+  .background--custom {
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    filter: blur(70px);
+  }
+  canvas#canvas {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    transform: rotate(0deg) scale(2) translateY(-60%);
+    --gradient-color-1: #ffc8dd;
+    --gradient-color-2: #ffafcc;
+    --gradient-color-3: #bde0fe;
+    --gradient-color-4: #a2d2ff;
+    --gradient-speed: 0.000008;
+  }
+
   body {
     padding: 20px;
     max-width: 1728px;
