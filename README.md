@@ -1,5 +1,10 @@
 # FD-404-page
+
+[![wakatime](https://wakatime.com/badge/user/ea8c41ab-c469-436f-8821-bf847d37bfd0/project/00aef5d8-b3db-4b1b-a630-9445939315a7.svg)](https://wakatime.com/badge/user/ea8c41ab-c469-436f-8821-bf847d37bfd0/project/00aef5d8-b3db-4b1b-a630-9445939315a7)
+
 An exercice turn into a masterclass (it's a joke I'm not a master lmao).
+
+![website preview](https://raw.githubusercontent.com/deavetheferret/404-page/main/src/img/preview-page.png)
 
 and here you got the link to see it in action : <a href="https://francois-devantay.at-eikon.ch/">404 HOME PAGE</a>
 
