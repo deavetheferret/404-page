@@ -165,30 +165,6 @@ video {
     transition: width 0.3s;
   }
 
-  .underline-1 {
-    max-width: 50%;
-  }
-
-  .underline-3 {
-    max-width: 83%;
-  }
-
-  .underline-4 {
-    max-width: 95%;
-  }
-
-  .underline-5 {
-    max-width: 100%;
-  }
-
-  .underline-6 {
-    max-width: 100%;
-  }
-
-  .underline-7 {
-    max-width: 100%;
-  }
-
   .underlining {
     width: 100%;
   }
@@ -382,12 +358,6 @@ video {
 
   .side-panel a {
     text-decoration: none;
-  }
-
-  .side-panel a:hover,
-  .side-panel a:active,
-  .side-panel a:focus {
-    text-decoration: underline;
   }
 
   .close-side-panel {
